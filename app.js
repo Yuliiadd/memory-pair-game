@@ -5,11 +5,10 @@ score = document.querySelector(".score__value"),
 restart = document.querySelector(".btn"),
 collection = document.querySelector(".collection");
 
-let openedCardsSrc = [];
-let openedCards = [];
-let foldedPairs = 0;
-let cardNames = ['c1', 'c2', 'c3', 'd4', 'd5', 'd6', 'c1', 'c2', 'c3', 'd4', 'd5', 'd6'];
-
+let openedCardsSrc = [],
+openedCards = [],
+foldedPairs = 0,
+cardNames = ['c1', 'c2', 'c3', 'd4', 'd5', 'd6', 'c1', 'c2', 'c3', 'd4', 'd5', 'd6'];
 
 // event listeners
 
@@ -20,10 +19,10 @@ restart.addEventListener("click", render);
 // function fliping cards & create arrays of opened cards
 
 function flipTheCard(e) {
+    if (e.target.className == "game__field" || e.target.className == "card__img") return;
     let frontSide = e.target;
     openedCards = document.querySelectorAll(".open__card");
     if (frontSide.tagName === "IMG" && openedCards.length < 2) {
-        console.log(openedCards);
         let openedCard = e.target.parentElement;
         openedCard.classList.add("open__card");
         openedCards = document.querySelectorAll(".open__card");
@@ -32,15 +31,11 @@ function flipTheCard(e) {
         backSide.style.transform = "rotateY(360deg)"
         backSide.style.opacity = "100";
         openedCardsSrc.push(backSide.src.slice(-6));
-        console.log(openedCardsSrc);
     };
 
     if (openedCards.length == 2) {
         checkThePairs();
     };
-
-    if (frontSide.tagName === "DIV") return;
-
 };
 
 // checking opened cards
