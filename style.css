@@ -272,8 +272,9 @@ and (max-width: 767px) {
     }
 
     .collection {
+        display: flex;
+        justify-content: center;
         margin: 10px auto;
-        /* width: 235px; */
     }
 
     .game__field {
@@ -286,5 +287,5 @@ and (max-width: 767px) {
         height: 15px;
         width: 15px;
     }
-
+ 
 }
