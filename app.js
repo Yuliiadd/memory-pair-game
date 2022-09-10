@@ -59,8 +59,8 @@ function checkThePairs() {
             miniCard.classList.add('miniCard');
             miniCard.src = `img/${openedCardsSrc[1]}`;
             pair.append(miniCard);
-            pair.style.marginLeft = "10px";
-            pair.style.marginRight = "10px";
+            pair.style.marginLeft = "5px";
+            pair.style.marginRight = "5px";
         };
         collection.append(pair);
 

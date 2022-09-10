@@ -64,7 +64,7 @@ body {
     height: 40px;
     border-radius: 50px;
     background: rgba(247, 239, 250, 0.1);
-    padding: 0 10px;
+    padding: 0 7px;
 }
 
 .miniCard {
@@ -280,6 +280,11 @@ and (max-width: 767px) {
         grid-template-columns: repeat(4, 60px);
         grid-template-rows: repeat(3, 60px);
         grid-gap: 5px;
+    }
+
+    .miniCard {
+        height: 15px;
+        width: 15px;
     }
 
 }
