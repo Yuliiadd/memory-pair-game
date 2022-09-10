@@ -51,6 +51,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     width: 60%;
     margin: 0 auto;
     height: 80px;
@@ -59,7 +60,7 @@ body {
 .collection {
     display: flex;
     align-items: center;
-    width: 420px;
+    max-width: 420px;
     height: 40px;
     border-radius: 50px;
     background: rgba(247, 239, 250, 0.1);
@@ -218,4 +219,67 @@ body {
 .task__name {
     color: white;
     font-size: 10px;
+}
+
+
+/* tablet */
+
+@media only screen
+
+and (min-width: 768px)
+and (max-width: 1199px) {
+    .desc_score {
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 15px;
+    }
+
+    .game__field {
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: repeat(2, 100px);
+        grid-gap: 10px;
+    }
+}
+
+/* mobile */
+
+@media only screen
+
+and (min-width: 320px)
+and (max-width: 767px) {
+
+    .title {
+        font-size: 18px;
+    }
+
+    .menu {
+        display: block;
+        height: 100px;
+        width: 80%;
+    }
+
+    .desc_score {
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 10px;
+        position: absolute;
+        top: 8px;
+        right: 0;
+    }
+
+    .collection {
+        margin: 10px auto;
+        /* width: 235px; */
+    }
+
+    .game__field {
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(3, 60px);
+        grid-gap: 5px;
+    }
+
 }
