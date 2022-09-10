@@ -25,7 +25,6 @@ function flipTheCard(e) {
         openedCard.classList.add("open__card");
         openedCardsSrc.push(backSide.src.slice(-6));
         openedCards = document.querySelectorAll(".open__card");
-        console.log(openedCards);
     };
 
     if (openedCards.length == 2) {
@@ -45,7 +44,7 @@ function checkThePairs() {
         for (let i=1; i<=2; i++) {
             let miniCard = document.createElement("img");
             miniCard.classList.add('miniCard');
-            miniCard.src = `/img/${openedCardsSrc[0]}`;
+            miniCard.src = `img/${openedCardsSrc[0]}`;
             pair.append(miniCard);
             pair.style.marginLeft = "10px";
             pair.style.marginRight = "10px";
@@ -94,7 +93,3 @@ function render() {
         card.renderCard();
     };
 };
-
-
-   
-
