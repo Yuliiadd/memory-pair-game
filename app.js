@@ -41,14 +41,16 @@ function flipTheCard(e) {
 // checking opened cards
 
 function checkThePairs() {
-    
+    console.log(openedCards[0].firstElementChild.src);
+    console.log(openedCards[1].firstElementChild.src);
+    console.log(foldedPairs);
+
     if (openedCards[0].firstElementChild.src == openedCards[1].firstElementChild.src && foldedPairs < 6) {
         foldedPairs++;
         score.textContent = foldedPairs;
         openedCards.forEach((card => {
             card.classList.remove("open__card");
         }));
-
         let pair = document.createElement("div");
         for (let i=1; i<=2; i++) {
             let miniCard = document.createElement("img");
@@ -102,6 +104,7 @@ function render() {
     field.classList.remove('field__over');
     restart.classList.remove("btn__red");
     collection.innerHTML = "";
+    foldedPairs = 0;
     for (let i = 0; i < cardNames.length; i++) {
         let card = new Card(cardNames[i]);
         card.renderCard();

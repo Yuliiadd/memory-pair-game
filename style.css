@@ -59,12 +59,22 @@ body {
 
 .collection {
     display: flex;
+    width: calc(100% / 2);
     align-items: center;
-    max-width: 420px;
+    justify-content: center;
     height: 40px;
     border-radius: 50px;
     background: rgba(247, 239, 250, 0.1);
+    margin: 0 50px;
     padding: 0 7px;
+}
+
+.collection::after {
+    content: "Your folded pairs will be here";
+    color: rgba(247, 239, 250, 0.5);
+    font-size: 10px;
+    position: absolute;
+    bottom: 5px;
 }
 
 .miniCard {
@@ -239,8 +249,13 @@ body {
 
 and (min-width: 768px)
 and (max-width: 1199px) {
+
     .desc_score {
         font-size: 15px;
+    }
+
+    .collection {
+        width: 100%;
     }
 
     .btn {
@@ -285,7 +300,13 @@ and (max-width: 767px) {
     .collection {
         display: flex;
         justify-content: center;
-        margin: 10px auto;
+        margin: 10px 0;
+        width: calc(100% - 10px);
+    }
+
+    .collection::after {
+        bottom: -12px;
+        font-size: 8px;
     }
 
     .game__field {
