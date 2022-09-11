@@ -41,7 +41,8 @@ function flipTheCard(e) {
 // checking opened cards
 
 function checkThePairs() {
-    if (openedCardsSrc[0] === openedCardsSrc[1] && foldedPairs < 6) {
+    
+    if (openedCards[0].firstElementChild.src == openedCards[1].firstElementChild.src && foldedPairs < 6) {
         foldedPairs++;
         score.textContent = foldedPairs;
         openedCards.forEach((card => {

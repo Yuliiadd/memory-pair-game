@@ -107,6 +107,14 @@ body {
     cursor: pointer;
 }
 
+.btn:hover {
+    background: rgba(247, 239, 250, 0.2);
+}
+
+.btn:active {
+    background: rgba(247, 239, 250, 0.3);
+}
+
 .btn__red {
     background: rgba(238, 83, 0, 0.3);
     animation: pulse 2s infinite;
