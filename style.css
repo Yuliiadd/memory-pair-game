@@ -238,10 +238,6 @@ body {
 .rotate360 {
     transform: rotateY(360deg);
 }
-/* 
-.visible {
-    opacity: 1;
-} */
 
 .hidden {
     opacity: 0;
